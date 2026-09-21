@@ -140,12 +140,6 @@
   }
   .cta h2 { font-size:1.9rem; margin-bottom:12px; }
   .cta p { color:var(--muted); margin-bottom:28px; }
-  .slots { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:30px; }
-  .slot {
-    padding:9px 18px; border-radius:9px; border:1px solid var(--line);
-    color:var(--text); font-size:.9rem; background:rgba(255,255,255,.03);
-  }
-  .slot b { color:var(--teal-bright); }
   .footer-note { text-align:center; color:var(--muted); font-size:.85rem; padding:30px; border-top:1px solid rgba(255,255,255,.05); }
 
   @media (max-width: 820px) {
@@ -164,10 +158,9 @@
   </div>
   <div class="links">
     <a href="#leistungen">Leistungen</a>
-    <a href="#preise">Preise</a>
     <a href="#ablauf">Ablauf</a>
   </div>
-  <a class="btn btn-copper" href="#buchen">Termin buchen</a>
+  <a class="btn btn-copper" href="mailto:info@remesdynamics.de">Kontakt</a>
 </nav>
 
 <header>
@@ -177,8 +170,8 @@
     <p class="lead">Ob Künstliche Intelligenz, Docker-Infrastruktur oder technische Unterstützung —
       ich bringe Licht ins Chaos. Konkret, ehrlich und ohne Fachchinesisch.</p>
     <div class="hero-cta">
-      <a class="btn btn-copper" href="#buchen">📅 Online-Termin buchen — ab 39 €</a>
-      <a class="btn btn-ghost" href="#preise">Preise ansehen</a>
+      <a class="btn btn-copper" href="mailto:info@remesdynamics.de">✉️ Kontakt aufnehmen</a>
+      <a class="btn btn-ghost" href="#leistungen">Leistungen ansehen</a>
     </div>
     <div class="hero-stats">
       <div><b>30 Min</b><small>Erstberatung online</small></div>
@@ -206,37 +199,6 @@
   </div>
 </section>
 
-<section id="preise" style="background:var(--bg2);">
-  <div class="sec-head">
-    <h2>Transparente <em>Preise</em></h2>
-    <p>Keine versteckten Kosten — alles vorab klar.</p>
-  </div>
-  <div class="pricing">
-    <div class="price-card">
-      <div class="amount">39&nbsp;€ <small>/ 30 Min</small></div>
-      <div class="per">📹 Online-Erstberatung</div>
-      <ul>
-        <li>Video-Call (oder Telefon)</li>
-        <li>Thema frei wählbar</li>
-        <li>Klare Handlungsempfehlung</li>
-        <li>Termine ab 16:30 Uhr</li>
-      </ul>
-      <a class="btn btn-ghost" href="#buchen">Termin wählen</a>
-    </div>
-    <div class="price-card hot">
-      <div class="tag">BELIEBT</div>
-      <div class="amount">69&nbsp;€ <small>/ Stunde</small></div>
-      <div class="per">📍 Vor-Ort-Termin</div>
-      <ul>
-        <li>Persönlich bei dir (Umgebung Reutlingen)</li>
-        <li>Hands-on: Geräte &amp; Setup live</li>
-        <li>+ Anfahrtskosten nach Entfernung</li>
-        <li>Termine ab 16:30 Uhr</li>
-      </ul>
-      <a class="btn btn-copper" href="#buchen">Termin wählen</a>
-    </div>
-  </div>
-</section>
 
 <section id="ablauf">
   <div class="sec-head">
@@ -244,31 +206,25 @@
   </div>
   <div class="steps">
     <div class="step"><div class="num">1</div><h4>Thema wählen</h4><p>KI, Docker, technische Unterstützung oder Allgemein — du entscheidest.</p></div>
-    <div class="step"><div class="num">2</div><h4>Termin buchen</h4><p>Online-Termin direkt im Kalender wählen, Vor-Ort auf Anfrage.</p></div>
-    <div class="step"><div class="num">3</div><h4>Beratung erhalten</h4><p>Konzentriert, verständlich, ohne unnötige Fachbegriffe.</p></div>
+    <div class="step"><div class="num">2</div><h4>Anfrage senden</h4><p>Kurz per E-Mail schildern, womit wir dir helfen können.</p></div>
+    <div class="step"><div class="num">3</div><h4>Beratung erhalten</h4><p>Termin nach Absprache — online oder vor Ort.</p></div>
     <div class="step"><div class="num">4</div><h4>Umsetzen</h4><p>Du bekommst konkrete nächste Schritte mit auf den Weg.</p></div>
   </div>
 </section>
 
-<section id="buchen">
+<section id="kontakt">
   <div class="cta">
-    <h2>📅 Jetzt Termin sichern</h2>
-    <p>Verfügbare Online-Slots (Beispielansicht — Kalender folgt):</p>
-    <div class="slots">
-      <span class="slot">Mo <b>16:30</b></span>
-      <span class="slot">Mo <b>17:30</b></span>
-      <span class="slot">Di <b>16:30</b></span>
-      <span class="slot">Mi <b>19:00</b></span>
-      <span class="slot">Do <b>17:00</b></span>
-      <span class="slot">Fr <b>18:30</b></span>
-    </div>
-    <a class="btn btn-copper" href="#" style="font-size:1.05rem;">Online-Termin buchen → 39 €</a>
-    <p style="margin-top:16px; font-size:.9rem;">Vor-Ort-Termin (69 €/h): <a href="mailto:kontakt@remesdynamics.de" style="color:var(--teal-bright);">kontakt@remesdynamics.de</a></p>
+    <h2>💬 Kontakt</h2>
+    <p>Derzeit läuft die Planungsphase — Anfragen und Fragen beantworte ich gern per E-Mail.</p>
+    <a class="btn btn-copper" href="mailto:info@remesdynamics.de" style="font-size:1.05rem;">info@remesdynamics.de</a>
   </div>
 </section>
 
 <div class="footer-note">
-  © 2026 REMES DYNAMICS · remesdynamics.de · Impressum · Datenschutz · AGB
+  <span>© 2026 REMES DYNAMICS · remesdynamics.de</span>
+<span><a href="impressum.html" style="color:var(--muted)">Impressum</a> ·
+<a href="datenschutz.html" style="color:var(--muted)">Datenschutz</a> ·
+<a href="agb.html" style="color:var(--muted)">AGB</a></span>
 </div>
 
 </body>
