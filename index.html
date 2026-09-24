@@ -148,6 +148,7 @@
     nav .links { display:none; }
   }
 </style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -156,10 +157,14 @@
     <img src="logo.png" alt="REMES DYNAMICS Logo">
     <span>REMES DYNAMICS</span>
   </div>
-  <div class="links">
+  <div class="links" id="navlinks">
     <a href="#leistungen">Leistungen</a>
     <a href="#ablauf">Ablauf</a>
+    <a href="apps.html">📱 Apps</a>
   </div>
+  <button class="burger" id="burger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
   <a class="btn btn-copper" href="#kontakt">Kontakt</a>
 </nav>
 
@@ -228,5 +233,16 @@
 <a href="agb.html" style="color:var(--muted)">AGB</a></span>
 </div>
 
+<script>
+const burger = document.getElementById('burger');
+const links = document.getElementById('navlinks');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open'); links.classList.remove('open');
+}));
+</script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+/* REMES DYNAMICS – Mobile Nav (Burger) + App-Styles */
+/* Burger-Menü: Button nur auf mobil sichtbar */
+.burger {
+  display: none;
+  background: none; border: 1px solid var(--line); border-radius: 8px;
+  width: 42px; height: 38px; cursor: pointer;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+}
+.burger span { display:block; width:20px; height:2px; background:var(--copper-light); transition:all .25s; }
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity:0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 820px) {
+  .burger { display: flex; }
+  /* Aufgeklapptes Menü als Dropdown unter der Nav */
+  nav .links {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: rgba(22,21,19,.97); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 6vw 16px;
+  }
+  nav .links.open { display: flex; }
+  nav .links a { padding: 12px 4px; border-bottom: 1px solid rgba(255,255,255,.05); font-size: 1.05rem; }
+  nav .links a:last-child { border-bottom: none; }
+}
+
+/* ---------- APPS SEITE ---------- */
+.apps-head { padding: 60px 6vw 30px; text-align: center; }
+.apps-head h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 12px; }
+.apps-head p { color: var(--muted); max-width: 640px; margin: 0 auto; }
+
+.apps-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px; max-width: 1100px; margin: 0 auto; padding: 20px 6vw 70px;
+}
+.app-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+  padding: 30px 26px; text-align: center; text-decoration: none; color: var(--text);
+  transition: all .3s; display: block;
+}
+.app-card:hover { transform: translateY(-6px); border-color: var(--teal);
+  box-shadow: 0 14px 40px rgba(0,0,0,.45), 0 0 30px rgba(46,133,120,.12); }
+.app-card .app-ico {
+  width: 84px; height: 84px; border-radius: 20px; margin: 0 auto 18px;
+  display: grid; place-items: center; font-size: 2.4rem;
+  background: linear-gradient(135deg, rgba(46,133,120,.25), rgba(196,122,58,.25));
+  border: 1px solid var(--line);
+}
+.app-card h3 { color: var(--teal-bright); margin-bottom: 8px; }
+.app-card p { color: var(--muted); font-size: .95rem; margin-bottom: 18px; }
+.app-card .app-badge {
+  display: inline-block; font-size: .8rem; padding: 4px 12px; border-radius: 99px;
+  border: 1px solid var(--copper); color: var(--copper-light); margin-bottom: 16px;
+}
+.app-card .open-link { color: var(--copper-light); font-weight: 600; font-size: .9rem; }

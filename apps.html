@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apps — REMES DYNAMICS</title>
+<link rel="icon" href="logo.png" type="image/png">
+<style>
+  :root {
+    --bg: #161513; --bg2: #1e1c19; --card: #201d1a;
+    --teal: #2E8578; --teal-bright: #3FA89A;
+    --copper: #C47A3A; --copper-light: #E8A968;
+    --text: #EDE6DC; --muted: #9A9188;
+    --line: rgba(196,122,58,.25);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI', system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  nav { position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between;
+    padding:14px 6vw; background:rgba(22,21,19,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+  nav img { height:44px; border-radius:8px; }
+  nav .brand { display:flex; align-items:center; gap:12px; }
+  nav .brand span { font-weight:700; letter-spacing:2px; color:var(--copper-light); }
+  nav .links { display:flex; gap:28px; font-size:.95rem; }
+  nav .links a { color:var(--muted); text-decoration:none; transition:color .2s; }
+  nav .links a:hover { color:var(--teal-bright); }
+  nav .links a.active { color:var(--copper-light); }
+  .btn { display:inline-block; padding:12px 28px; border-radius:10px; font-weight:600; text-decoration:none; transition:all .25s; }
+  .btn-copper { background:var(--copper); color:#161513; box-shadow:0 4px 18px rgba(196,122,58,.35); }
+  .btn-copper:hover { background:var(--copper-light); transform:translateY(-2px); }
+  .btn-ghost { border:1px solid var(--teal); color:var(--teal-bright); }
+  .btn-ghost:hover { background:rgba(46,133,120,.12); }
+  section { padding:60px 6vw; }
+  .sec-head { text-align:center; margin-bottom:44px; }
+  .sec-head h2 { font-size:1.9rem; margin-bottom:10px; }
+  .sec-head h2 em { color:var(--copper-light); font-style:normal; }
+  .sec-head p { color:var(--muted); }
+  .footer-note { text-align:center; color:var(--muted); font-size:.85rem; padding:30px; border-top:1px solid rgba(255,255,255,.05); }
+  .footer-note a { color:var(--muted); }
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <img src="logo.png" alt="REMES DYNAMICS Logo">
+    <span>REMES DYNAMICS</span>
+  </div>
+  <div class="links" id="navlinks">
+    <a href="index.html">🏠 Start</a>
+    <a href="index.html#leistungen">Leistungen</a>
+    <a href="apps.html" class="active">📱 Apps</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="apps-head">
+  <div class="badge" style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:99px;font-size:.85rem;border:1px solid var(--teal);color:var(--teal-bright);margin-bottom:22px;">
+    <span style="width:8px;height:8px;border-radius:50%;background:var(--teal-bright);box-shadow:0 0 10px var(--teal-bright);"></span>
+    Eigene Apps von REMES DYNAMICS
+  </div>
+  <h1>Meine <span style="background:linear-gradient(90deg,var(--teal-bright),var(--copper-light));-webkit-background-clip:text;background-clip:text;color:transparent;">Apps</span></h1>
+  <p>Selbst entwickelte Apps für Android — kostenlos im Play Store. Jede App hat eine eigene Info-Seite mit Screenshots, Features und Hilfe.</p>
+</div>
+
+<section>
+  <div class="apps-grid">
+    <!-- Beispiel-App-Karte -->
+    <a class="app-card" href="apps/unterhaltsrechner.html">
+      <div class="app-ico">🧮</div>
+      <span class="app-badge">Android · Play Store</span>
+      <h3>Unterhaltsrechner</h3>
+      <p>Berechnet Unterhaltszahlungen nach Düsseldorfer Tabelle — schnell, klar, ohne Anmeldung.</p>
+      <span class="open-link">Infos &amp; Screenshots ansehen →</span>
+    </a>
+    <!-- Platzhalter für künftige Apps
+    <a class="app-card" href="apps/...">
+      <div class="app-ico">📱</div>
+      <span class="app-badge">Android · Play Store</span>
+      <h3>Weitere App</h3>
+      <p>Kurzbeschreibung der App.</p>
+      <span class="open-link">Infos & Screenshots ansehen →</span>
+    </a>
+    -->
+  </div>
+</section>
+
+<div class="footer-note">
+  <span>© 2026 REMES DYNAMICS · remesdynamics.de</span>
+  <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="agb.html">AGB</a></span>
+</div>
+
+<script>
+const burger = document.getElementById('burger');
+const links = document.getElementById('navlinks');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  burger.classList.remove('open'); links.classList.remove('open');
+}));
+</script>
+</body>
+</html>
